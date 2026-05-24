@@ -5,14 +5,446 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Abdullah / Professional Web Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+
     <link rel="stylesheet" href="index.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<style>
+    /* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* LARGE SCREENS / 4K / SMART TV */
+
+@media (min-width: 1600px) {
+
+    .projects-container {
+        max-width: 1700px;
+        margin: auto;
+    }
+
+    .introduction {
+        height: 750px;
+    }
+
+    #heading1 {
+        font-size: 34px;
+    }
+
+    #heading2 {
+        font-size: 80px;
+    }
+
+    #paragraph1 {
+        width: 850px;
+        font-size: 28px;
+        line-height: 2;
+    }
+
+    .img1 {
+        width: 450px;
+        height: 450px;
+        right: 120px;
+        top: 180px;
+    }
+
+    .arrow1 {
+        top: 700px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .div2 {
+        top: 1050px;
+        right: 120px;
+    }
+
+    .project-card {
+        width: 500px;
+    }
+
+    .skill {
+        width: 1000px;
+    }
+}
+
+
+
+/* =========================================
+   LAPTOPS
+========================================= */
+
+@media (max-width: 1200px) {
+
+    #heading2 {
+        font-size: 44px;
+    }
+
+    #paragraph1 {
+        width: 500px;
+        font-size: 18px;
+    }
+
+    .img1 {
+        width: 260px;
+        height: 260px;
+        right: 40px;
+    }
+
+    .div2 {
+        right: 20px;
+        gap: 15px;
+    }
+
+    .project-card {
+        width: 45%;
+    }
+
+    .div11 {
+        margin-left: 40px;
+    }
+
+    .div12 {
+        left: 550px;
+    }
+}
+
+
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 992px) {
+
+    #navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo-img {
+        margin: auto;
+        padding-left: 0;
+    }
+
+    #navbar a {
+        margin: 5px;
+        font-size: 16px;
+    }
+
+    .introduction {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    #heading1,
+    #heading2,
+    #paragraph1 {
+        text-align: center;
+        margin: auto;
+        padding-left: 0;
+    }
+
+    #paragraph1 {
+        width: 90%;
+    }
+
+    #button1,
+    #button2 {
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    .buttons-wrapper {
+        text-align: center;
+    }
+
+    .divicons {
+        text-align: center;
+    }
+
+    .icon1 {
+        margin-left: 0;
+    }
+
+    .img1 {
+        position: relative;
+        top: 40px;
+        right: auto;
+        margin: auto;
+        display: block;
+    }
+
+    .arrow1 {
+        display: none;
+    }
+
+    .level2 {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    .div2 {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        margin-top: 50px;
+        transform: none;
+    }
+
+    .projects-container {
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    .div14 {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    .skill {
+        width: 90%;
+    }
+
+    .level3 {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    .div11,
+    .div12 {
+        position: static;
+        width: 90%;
+        margin: auto;
+        height: auto;
+    }
+
+    .div12 {
+        margin-top: 50px;
+    }
+
+    .input1,
+    .input2,
+    .textarea1 {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+}
+
+
+
+/* =========================================
+   MOBILE DEVICES
+========================================= */
+
+@media (max-width: 768px) {
+
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .theme-toggle {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    #heading1 {
+        font-size: 18px;
+        padding-top: 50px;
+    }
+
+    #heading2 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    #paragraph1 {
+        width: 92%;
+        font-size: 15px;
+        line-height: 1.7;
+        padding: 12px;
+    }
+
+    #button1,
+    #button2 {
+        width: 180px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .img1 {
+        width: 220px;
+        height: 220px;
+        top: 20px;
+    }
+
+    .div2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #div3,
+    #div4,
+    #div5 {
+        width: 90%;
+    }
+
+    .heading3,
+    .heading4,
+    .skillsheading,
+    #heading5 {
+        font-size: 30px;
+    }
+
+    .p2,
+    .p3,
+    .p4 {
+        font-size: 15px;
+        line-height: 28px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .project-content h2 {
+        font-size: 22px;
+    }
+
+    .project-content h3 {
+        font-size: 18px;
+    }
+
+    .skillspan {
+        font-size: 14px;
+    }
+
+    .div11 {
+        width: 100%;
+    }
+
+    .icon7,
+    .icon8,
+    .icon9,
+    .icon10 {
+        padding-left: 20px;
+    }
+
+    .div12 {
+        width: 100%;
+    }
+
+    .input1,
+    .input2,
+    .textarea1 {
+        width: 100%;
+    }
+
+    .button3 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-box {
+        width: 100%;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+}
+
+
+
+/* =========================================
+   SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 480px) {
+
+    #heading2 {
+        font-size: 26px;
+    }
+
+    #paragraph1 {
+        font-size: 14px;
+    }
+
+    .img1 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .heading3,
+    .heading4,
+    .skillsheading,
+    #heading5 {
+        font-size: 25px;
+    }
+
+    .project-content {
+        padding: 16px;
+    }
+
+    .project-content p {
+        font-size: 14px;
+    }
+
+    .footer-box h3,
+    .quick-links-title {
+        font-size: 20px;
+    }
+}
+</style>
 
 <body>
 
     <div id="navbar">
+
         <img src="/logo/Luxurious_AK_Web_Developer_logo-removebg-preview.png" alt="logo" class="logo-img">
+
+        <div class="theme-toggle">
+
+            <input type="checkbox" id="darkModeToggle">
+
+            <label for="darkModeToggle" class="toggle-label">
+
+                <!-- SUN ICON -->
+                <i class="fa-solid fa-sun theme-icon sun-icon"></i>
+
+                <!-- MOON ICON -->
+                <i class="fa-solid fa-moon theme-icon moon-icon"></i>
+
+            </label>
+
+        </div>
+
         <a href="#">Home</a>
         <a href="about.html">About</a>
         <a href="skills.html">Skills</a>
@@ -22,17 +454,18 @@
 
     </div>
 
+
     <div class="level2">
 
         <div class="introduction">
 
-            <h3 id="heading1">PROFESSIONAL WEB DEVELOPER</h3> 
+            <h3 id="heading1">PROFESSIONAL WEB DEVELOPER</h3>
 
             <h1 id="heading2"><span class="span5">Hi, I'm</span> <span class="span6">Muhammad</span> <span
                     class="span7">Abdullah</span> </h1>
 
-            <p id="paragraph1">I build modern, responsive, and high-performance web  <br> applications. Passionate about
-                clean code, scalable <br> architecture, and exceptional user experiences.</p>
+            <p id="paragraph1">I build modern, responsive, and high-performance web <br> applications. Passionate about
+                clean code, scalable <br> architecture and exceptional user experiences.</p>
 
             <a href="/Files/Muhammad_Abdullah_CV.pdf" target="_blank">
                 <button id="button1">
@@ -46,12 +479,14 @@
 
             <div class="divicons">
                 <a href="https://wa.me/03369669595" class="icon1"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="mailto:abdullah245823@gmail.com" class="icon2"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdullah245823@gmail.com" class="icon2">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
                 <a href="https://www.linkedin.com/in/muhammad-abdullah-kashif-manzoor-8384023b6?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                     class="icon3"><i class="fa-brands fa-linkedin"></i></a>
             </div>
 
-            <img src="/images/img2.png" alt="My Image" class="img1">
+            <img src="/portfolio/img2.png" alt="My Image" class="img1">
 
             <i class="fa-solid fa-arrow-down arrow1"></i>
 
@@ -61,10 +496,10 @@
         <hr class="line1">
         <br>
         <p class="p2">I'm <b id="abdullahb">Muhammad Abdullah</b>, a dedicated Software Engineer specializing in
-            full-stack <br> web development. I craft pixel-perfect, accessible, and SEO-optimized websites that <br>
+            full-stack <br> web development. I craft pixel-perfect, accessible and SEO-optimized websites that <br>
             help businesses grow their online presence.</p>
         <br>
-        <p class="p3">With expertise in modern frameworks like React, Next.js, and Node.js, I deliver <br> fast, secure,
+        <p class="p3">With expertise in modern frameworks like React, Next.js and Node.js, I deliver <br> fast, secure
             and scalable web solutions. From responsive front-end interfaces to <br> robust back-end APIs, I handle the
             complete development lifecycle.</p>
         <br>
@@ -86,7 +521,7 @@
                 15+ Projects
             </div>
 
-            <div id="div5"></i>
+            <div id="div5">
                 <i class="fa-solid fa-graduation-cap icon6"></i>
                 2+ Years Experience
             </div>
@@ -95,47 +530,110 @@
 
     </div>
 
-
     <h2 class="heading4">Featured Projects</h2>
     <hr class="line2">
 
-    <div class="div6">
+    <div class="projects-container">
 
-        <div id="div7" class="box-left">
-            <h2 class="heading7">E-Commerce Website</h2>
-            <br>
-            <h2 class="heading11">E-Commerce Platefoam</h2>
-            <p class="p5">Full online store with product browsing, includes auth, filtering & cart system using React,
-                Node.js, Express & MongoDB.</p>
+        <!-- Project 1 -->
+        <div class="project-card left">
+            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4" alt="Ecommerce">
+
+            <div class="project-content">
+                <h2>E-Commerce Website</h2>
+                <h3>E-Commerce Platform</h3>
+
+                <p>
+                    Full online store with product browsing, auth,
+                    filtering & cart system using React, Node.js,
+                    Express & MongoDB.
+                </p>
+            </div>
         </div>
 
+        <!-- Project 2 -->
+        <div class="project-card top">
+            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b" alt="Task App">
 
-        <div id="div8" class="box-right">
-            <h2 class="heading8">Task Management App</h2>
-            <br>
-            <h2 class="heading12">Task Management App</h2>
-            <p class="p6">Task management app for tasks, deadlines & productivity with user-friendly add/edit/delete &
-                complete features using JavaScript/React.</p>
+            <div class="project-content" id="top">
+                <h2>Task Management App</h2>
+                <h3>Productivity Manager</h3>
+
+                <p>
+                    Task management app with deadlines,
+                    add/edit/delete and complete features
+                    using JavaScript & React.
+                </p>
+            </div>
         </div>
 
+        <!-- Project 3 -->
+        <div class="project-card right">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Dashboard">
 
-        <div id="div9" class="box-left">
-            <h2 class="heading9">Portfolio Website</h2>
-            <br>
-            <h2 class="heading13">Portfolio Dashboard</h2>
-            <p class="p7">Interactive analytics dashboard with dynamic charts, dark mode & responsive design. Built
-                using HTML, CSS, JavaScript.</p>
+            <div class="project-content">
+                <h2>Portfolio Dashboard</h2>
+                <h3>Analytics Website</h3>
+
+                <p>
+                    Interactive analytics dashboard with charts,
+                    dark mode & responsive design using
+                    HTML, CSS & JavaScript.
+                </p>
+            </div>
         </div>
 
-        <div id="div10" class="box-right">
-            <h2 class="heading10"> Blog Website (CMS) </h2>
-            <br>
-            <h2 class="heading14"> Blog Platform</h2>
-            <p class="p8">SEO CMS using HTML, CSS, JavaScript & MERN with markdown editor, image optimization, admin
-                dashboard, CRUD & comments.</p>
+        <!-- Project 4 -->
+        <div class="project-card left">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643" alt="Blog CMS">
+
+            <div class="project-content">
+                <h2>Blog Website (CMS)</h2>
+                <h3>Blog Platform</h3>
+
+                <p>
+                    SEO CMS with markdown editor,
+                    image optimization, CRUD & comments
+                    using MERN Stack.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card bottom">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Chat App">
+
+            <div class="project-content">
+                <h2>Chat Application</h2>
+                <h3>Realtime Messenger</h3>
+
+                <p>
+                    Realtime chat application with authentication,
+                    online status & messaging using
+                    Socket.io and React.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card right">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Learning Platform">
+
+            <div class="project-content">
+                <h2>Learning Platform</h2>
+                <h3>Online Education System</h3>
+
+                <p>
+                    Online learning platform with courses,
+                    student dashboard & responsive UI
+                    using React & Firebase.
+                </p>
+            </div>
         </div>
 
     </div>
+
+
 
     <div class="div14">
 
@@ -276,7 +774,8 @@
             <a href="https://wa.me/03369669595" class="icon8"><i class="fa-brands fa-whatsapp"></i>
                 <span class="span2">0336-9669595</span> </a>
 
-            <a href="mailto:abdullah245823@gmail.com" class="icon9"><i class="fa-regular fa-envelope"></i>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdullah245823@gmail.com" class="icon9"><i
+                    class="fa-regular fa-envelope"></i>
                 <span class="span3">abdullah245823@gmail.com</span> </a>
 
             <a href="https://maps.app.goo.gl/TGCAYuS7B9eF9VVo9?g_st=ac" class="icon10"><i
@@ -285,26 +784,103 @@
 
         </div>
 
+        <form id="contactForm" name="contactForm">
 
-        <div class="div12">
+            <div class="div12">
 
-            <input type="text" placeholder="Your Name" class="input1">
+                <input type="text" placeholder="Your Name" class="input1" id="name">
 
-            <input type="email" placeholder="Your Email" class="input2">
+                <input type="email" placeholder="Your Email" class="input2" id="email">
 
-            <textarea placeholder="Your Message" class="textarea1"></textarea>
+                <textarea placeholder="Your Message" class="textarea1" id="message"></textarea>
 
-            <button class="button3"> Send Message <i class="fa-regular fa-paper-plane icon14"></i> </button>
+                <button type="button" class="button3" id="sendBtn">
+                    Send Message
+                    <i class="fa-regular fa-paper-plane icon14"></i>
+                </button>
 
-        </div>
-    </div>
+            </div>
 
-    <div class="footer">
-        <p>© 2026 Muhammad Abdullah. All rights reserved.</p>
-    </div>
+        </form>
 
 
-<script src="index.js"></script>
+
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <!-- ABOUT -->
+                <div class="footer-box">
+                    <h3>About Me</h3>
+                    <p>
+                        I am a Full Stack Web Developer passionate
+                        about building modern, responsive and
+                        high-performance web applications.
+                        I focus on clean code, scalable solutions
+                        and creating smooth user experiences.
+                    </p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div class="footer-box">
+
+                    <h3 class="quick-links-title">Quick Links</h3>
+
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="services.html">Services</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="https://wa.me/03369669595">Contact Me</a>
+                    </div>
+
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-box">
+
+                    <h3>Get In Touch</h3>
+
+                    <div class="footer-contact">
+
+                        <a href="tel:+923269669595">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>0326-9669595</span>
+                        </a>
+
+                        <a href="https://wa.me/03369669595">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>0336-9669595</span>
+                        </a>
+
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdullah245823@gmail.com">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>abdullah245823@gmail.com</span>
+                        </a>
+
+                        <a href="https://maps.app.goo.gl/TGCAYuS7B9eF9VVo9?g_st=ac">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Faisalabad, Pakistan</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM BAR -->
+            <div class="footer-bottom">
+                <p>© 2026 Abdullah Developer | All Rights Reserved</p>
+            </div>
+
+        </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="index.js"></script>
+
 
 </body>
 
