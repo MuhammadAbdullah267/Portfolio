@@ -231,7 +231,6 @@
     font-size: 25px;
     letter-spacing: 3px;
     word-spacing: 5px;
-
     opacity: 0;
     animation: slideUp 1.5s ease forwards;
     animation-delay: 0.2s;
@@ -243,7 +242,6 @@
     font-weight: bolder;
     padding-top: 14px;
     padding-left: 30px;
-
     opacity: 0;
     animation: slideUp 1.5s ease forwards;
     animation-delay: 0.5s;
@@ -441,6 +439,7 @@
     cursor: pointer;
 
     border: 2px solid transparent;
+    text-decoration: none;
 
     transition: all 0.35s ease;
 
@@ -451,14 +450,22 @@
     margin-top: 2px;
 }
 
+.btn-link {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 0;
+}
+
 #button1 {
 
     background: #1E8549;
+
 
     margin-left: 30px;
 
     animation: slideUp 1.2s ease forwards;
     animation-delay: 0.9s;
+
 }
 
 #button1:hover {
@@ -852,7 +859,8 @@
 
 .level2 {
     background-color: rgba(245, 245, 245, 0.842);
-    height: 1020px;
+    height: auto;
+    min-height: 1020px;
 }
 
 .heading3 {
@@ -1881,6 +1889,8 @@ body.dark-theme #div5::before {
         inset 0 2px 5px rgba(0, 0, 0, 0.12);
 
     transition: 0.4s;
+
+
 }
 
 .progress-bar .progress {
@@ -1890,23 +1900,30 @@ body.dark-theme #div5::before {
     border-radius: 100px;
 
     background: linear-gradient(90deg,
-            #00c853,
-            #00e5ff,
-            #7c4dff,
-            #ff4081,
-            #ffeb3b,
-            #00c853);
+
+            #00F5FF,
+            #00D4FF,
+            #3A86FF,
+            #5E60CE,
+            #8338EC,
+            #FF006E,
+            #FFBE0B);
 
     background-size: 500% 500%;
+
+    width: 0;
 
     animation:
         colorFlow 6s ease infinite,
         glowPulse 2s ease-in-out infinite;
 
     transition:
+        width 1.8s ease-out,
         transform 0.4s ease,
         box-shadow 0.4s ease;
 }
+
+
 
 .progress-bar:hover .progress {
 
@@ -2534,7 +2551,7 @@ body.dark-theme #div5::before {
 }
 
 
-footer{
+footer {
     font-family: 'Poppins', sans-serif;
     background: #e0ecf5dc;
     color: #0f172a;
@@ -2542,7 +2559,7 @@ footer{
     margin-top: -400px;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -2553,15 +2570,15 @@ footer{
 
 
 
-.footer-box{
+.footer-box {
     flex: 1;
     min-width: 280px;
-    
+
 }
 
 
 
-.about-footer{
+.about-footer {
     position: relative;
     top: 100;
 }
@@ -2569,7 +2586,7 @@ footer{
 
 
 .footer-box h3,
-.quick-links-title{
+.quick-links-title {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 28px;
@@ -2581,7 +2598,7 @@ footer{
 
 
 .footer-box h3::after,
-.quick-links-title::after{
+.quick-links-title::after {
     content: "";
     position: absolute;
     left: 0;
@@ -2593,13 +2610,13 @@ footer{
 }
 
 
-.footer-links{
+.footer-links {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-.footer-links a{
+.footer-links a {
     text-decoration: none;
     color: #475569;
     font-size: 16px;
@@ -2608,19 +2625,19 @@ footer{
     width: fit-content;
 }
 
-.footer-links a:hover{
+.footer-links a:hover {
     color: #0ea5e9;
     transform: translateX(6px);
 }
 
 
-.footer-contact{
+.footer-contact {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-.footer-contact a{
+.footer-contact a {
     text-decoration: none;
     color: #475569;
     display: flex;
@@ -2631,7 +2648,7 @@ footer{
     font-weight: 500;
 }
 
-.footer-contact a i{
+.footer-contact a i {
     width: 45px;
     height: 45px;
     background: #e0f2fe;
@@ -2644,25 +2661,25 @@ footer{
     transition: 0.3s ease;
 }
 
-.footer-contact a:hover{
+.footer-contact a:hover {
     color: #0ea5e9;
     transform: translateX(6px);
 }
 
-.footer-contact a:hover i{
+.footer-contact a:hover i {
     background: #0ea5e9;
     color: #fff;
 }
 
 
-.footer-bottom{
+.footer-bottom {
     width: 100%;
     border-top: 1px solid #dbe3ec;
     margin-top: 40px;
     padding-top: 25px;
 }
 
-.footer-bottom p{
+.footer-bottom p {
     color: #5d6f8a;
     font-size: 18px;
     letter-spacing: 0.5px;
@@ -2670,19 +2687,19 @@ footer{
 }
 
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-    .footer-container{
+    .footer-container {
         flex-direction: column;
         gap: 40px;
     }
 
-    footer{
+    footer {
         padding: 60px 6% 20px;
     }
 
     .footer-box h3,
-    .quick-links-title{
+    .quick-links-title {
         font-size: 22px;
     }
 
@@ -2691,7 +2708,7 @@ footer{
 
 
 
- 
+
 
 .theme-toggle {
 
@@ -2912,13 +2929,11 @@ body.dark-theme .p4::after {
 
     border-radius: 50px;
 
-    background: linear-gradient(
-        90deg,
-        #00d9ff,
-        #7a5cff,
-        #ff4fd8,
-        #00ffcc
-    );
+    background: linear-gradient(90deg,
+            #00d9ff,
+            #7a5cff,
+            #ff4fd8,
+            #00ffcc);
 
     background-size: 300% 100%;
 
@@ -3221,16 +3236,14 @@ body.dark-theme .p8:hover {
 
 body.dark-theme .footer {
 
-    background: linear-gradient(
-        180deg,
-        #111827,
-        #0f172a,
-        #020617
-    );
+    background: linear-gradient(180deg,
+            #111827,
+            #0f172a,
+            #020617);
 
-    color: rgba(255,255,255,0.88);
+    color: rgba(255, 255, 255, 0.88);
 
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 
     transition: all 0.4s ease;
 }
@@ -3283,12 +3296,10 @@ body.dark-theme .quick-links-title::after {
 
     border-radius: 50px;
 
-    background: linear-gradient(
-        90deg,
-        #00d9ff,
-        #7a5cff,
-        #ff4fd8
-    );
+    background: linear-gradient(90deg,
+            #00d9ff,
+            #7a5cff,
+            #ff4fd8);
 }
 
 
@@ -3296,7 +3307,7 @@ body.dark-theme .quick-links-title::after {
 
 body.dark-theme .footer-box p {
 
-    color: rgba(255,255,255,0.76);
+    color: rgba(255, 255, 255, 0.76);
 
     line-height: 26px;
 
@@ -3312,7 +3323,7 @@ body.dark-theme .footer-box p {
 
 body.dark-theme .footer-links a {
 
-    color: rgba(255,255,255,0.78);
+    color: rgba(255, 255, 255, 0.78);
 
     text-decoration: none;
 
@@ -3324,7 +3335,7 @@ body.dark-theme .footer-links a:hover {
 
     color: #00d9ff;
 
-    text-shadow: 0 0 10px rgba(0,217,255,0.35);
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.35);
 }
 
 
@@ -3332,7 +3343,7 @@ body.dark-theme .footer-links a:hover {
 
 body.dark-theme .footer-contact a {
 
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 
     text-decoration: none;
 
@@ -3362,7 +3373,7 @@ body.dark-theme .footer-contact a:hover i {
 
     color: #ff4fd8;
 
-    text-shadow: 0 0 12px rgba(255,79,216,0.5);
+    text-shadow: 0 0 12px rgba(255, 79, 216, 0.5);
 }
 
 
@@ -3370,7 +3381,7 @@ body.dark-theme .footer-contact a:hover i {
 
 body.dark-theme .footer-bottom {
 
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 
     text-align: center;
 
@@ -3382,15 +3393,9 @@ body.dark-theme .footer-bottom {
 
 body.dark-theme .footer-bottom p {
 
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
 
     font-size: 14px;
 
     letter-spacing: 0.4px;
 }
-
-
-/* Responsive Website */
-
-
-

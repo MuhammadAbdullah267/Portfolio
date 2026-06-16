@@ -19,415 +19,703 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <style>
+    /* LARGE SCREENS / 4K / SMART TV */
+
+    @media (min-width: 1600px) {
+
+        .projects-container {
+            max-width: 1700px;
+            margin: auto;
+        }
+
+        .introduction {
+            height: 750px;
+        }
+
+        #heading1 {
+            font-size: 34px;
+        }
+
+        #heading2 {
+            font-size: 80px;
+        }
+
+        #paragraph1 {
+            width: 850px;
+            font-size: 28px;
+            line-height: 2;
+        }
+
+        .img1 {
+            width: 450px;
+            height: 450px;
+            right: 120px;
+            top: 180px;
+        }
+
+        .arrow1 {
+            top: 700px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .div2 {
+            top: 1050px;
+            right: 120px;
+        }
+
+        .project-card {
+            width: 500px;
+        }
+
+        .skill {
+            width: 1000px;
+        }
+    }
+
+
+
     /* =========================================
-   RESPONSIVE DESIGN
-========================================= */
-
-/* LARGE SCREENS / 4K / SMART TV */
-
-@media (min-width: 1600px) {
-
-    .projects-container {
-        max-width: 1700px;
-        margin: auto;
-    }
-
-    .introduction {
-        height: 750px;
-    }
-
-    #heading1 {
-        font-size: 34px;
-    }
-
-    #heading2 {
-        font-size: 80px;
-    }
-
-    #paragraph1 {
-        width: 850px;
-        font-size: 28px;
-        line-height: 2;
-    }
-
-    .img1 {
-        width: 450px;
-        height: 450px;
-        right: 120px;
-        top: 180px;
-    }
-
-    .arrow1 {
-        top: 700px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .div2 {
-        top: 1050px;
-        right: 120px;
-    }
-
-    .project-card {
-        width: 500px;
-    }
-
-    .skill {
-        width: 1000px;
-    }
-}
-
-
-
-/* =========================================
    LAPTOPS
 ========================================= */
 
-@media (max-width: 1200px) {
+    @media (max-width: 1200px) {
 
-    #heading2 {
-        font-size: 44px;
+        #heading2 {
+            font-size: 44px;
+        }
+
+        #paragraph1 {
+            width: 80%;
+            max-width: 700px;
+            font-size: 18px;
+        }
+
+        .img1 {
+            width: 260px;
+            height: 260px;
+            right: 40px;
+        }
+
+        .arrow1 {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .level2 {
+            padding-bottom: 30px;
+        }
+
+        .div2 {
+            position: static;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .p2,
+        .p3,
+        .p4 {
+            width: min(800px, 90%);
+            margin: 0 auto 20px auto;
+
+            text-align: left;
+            line-height: 1.8;
+            font-size: 16px;
+
+            color: #444;
+            display: block;
+        }
+
+        .project-card {
+            width: 45%;
+        }
+
+        .div11 {
+            margin-left: 40px;
+        }
+
+        .div12 {
+            left: 550px;
+        }
     }
 
-    #paragraph1 {
-        width: 500px;
-        font-size: 18px;
-    }
-
-    .img1 {
-        width: 260px;
-        height: 260px;
-        right: 40px;
-    }
-
-    .div2 {
-        right: 20px;
-        gap: 15px;
-    }
-
-    .project-card {
-        width: 45%;
-    }
-
-    .div11 {
-        margin-left: 40px;
-    }
-
-    .div12 {
-        left: 550px;
-    }
-}
 
 
-
-/* =========================================
+    /* =========================================
    TABLETS
 ========================================= */
 
-@media (max-width: 992px) {
+    @media (max-width: 992px) {
 
-    #navbar {
-        justify-content: center;
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px 0;
+        #navbar {
+            justify-content: center;
+            flex-wrap: wrap;
+            height: auto;
+            padding: 10px 0;
+        }
+
+        .logo-img {
+            margin: auto;
+            padding-left: 0;
+        }
+
+        #navbar a {
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        .arrow1 {
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20px;
+        }
+
+        .introduction {
+            height: auto;
+            padding-bottom: 80px;
+        }
+
+        #heading1,
+        #heading2,
+        #paragraph1 {
+            text-align: center;
+            margin: auto;
+            padding-left: 0;
+        }
+
+        #paragraph1 {
+            width: 90%;
+        }
+
+        #button1,
+        #button2 {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .buttons-wrapper {
+            text-align: center;
+        }
+
+        .divicons {
+            text-align: center;
+        }
+
+        .icon1 {
+            margin-left: 0;
+        }
+
+        .img1 {
+            position: relative;
+            top: 40px;
+            right: auto;
+            margin: auto;
+            display: block;
+        }
+
+
+        .level2 {
+            height: auto;
+            padding-bottom: 80px;
+        }
+
+        .div2 {
+            position: static;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            margin-top: 50px;
+            transform: none;
+        }
+
+        .projects-container {
+            gap: 20px;
+        }
+
+        .project-card {
+            width: 90%;
+        }
+
+        .div14 {
+            height: auto;
+            padding-bottom: 80px;
+        }
+
+        .skill {
+            width: 90%;
+        }
+
+        .level3 {
+            height: auto;
+            padding-bottom: 80px;
+        }
+
+        .div11,
+        .div12 {
+            position: static;
+            width: 90%;
+            margin: auto;
+            height: auto;
+        }
+
+        .div12 {
+            margin-top: 50px;
+        }
+
+        .input1,
+        .input2,
+        .textarea1 {
+            width: 100%;
+        }
+
+        footer {
+            margin-top: 0;
+        }
     }
 
-    .logo-img {
-        margin: auto;
-        padding-left: 0;
-    }
 
-    #navbar a {
-        margin: 5px;
-        font-size: 16px;
-    }
 
-    .introduction {
-        height: auto;
-        padding-bottom: 80px;
-    }
-
-    #heading1,
-    #heading2,
-    #paragraph1 {
-        text-align: center;
-        margin: auto;
-        padding-left: 0;
-    }
-
-    #paragraph1 {
-        width: 90%;
-    }
-
-    #button1,
-    #button2 {
-        display: inline-block;
-        margin-top: 15px;
-    }
-
-    .buttons-wrapper {
-        text-align: center;
-    }
-
-    .divicons {
-        text-align: center;
-    }
-
-    .icon1 {
-        margin-left: 0;
-    }
-
-    .img1 {
-        position: relative;
-        top: 40px;
-        right: auto;
-        margin: auto;
-        display: block;
-    }
-
-    .arrow1 {
+    /* Hide menu toggle on desktop */
+    .menu-toggle {
         display: none;
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
     }
 
-    .level2 {
-        height: auto;
-        padding-bottom: 80px;
-    }
-
-    .div2 {
-        position: static;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        margin-top: 50px;
-        transform: none;
-    }
-
-    .projects-container {
+    /* Desktop menu */
+    #nav-links {
+        display: flex;
         gap: 20px;
     }
 
-    .project-card {
-        width: 90%;
-    }
 
-    .div14 {
-        height: auto;
-        padding-bottom: 80px;
-    }
-
-    .skill {
-        width: 90%;
-    }
-
-    .level3 {
-        height: auto;
-        padding-bottom: 80px;
-    }
-
-    .div11,
-    .div12 {
-        position: static;
-        width: 90%;
-        margin: auto;
-        height: auto;
-    }
-
-    .div12 {
-        margin-top: 50px;
-    }
-
-    .input1,
-    .input2,
-    .textarea1 {
-        width: 100%;
-    }
-
-    footer {
-        margin-top: 0;
-    }
-}
-
-
-
-/* =========================================
+    /* =========================================
    MOBILE DEVICES
 ========================================= */
 
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
 
-    #navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 0;
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: 10px 15px;
+        }
+
+        /* Logo Left */
+        .logo-img {
+            width: 60px;
+            height: auto;
+            margin-left: 5px;
+        }
+
+        /* Toggle Center */
+        .theme-toggle {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Three Lines Right */
+        .menu-toggle {
+            display: block !important;
+            font-size: 28px;
+            cursor: pointer;
+            color: rgba(245, 245, 245, 0.76);
+            z-index: 1001;
+        }
+
+        /* Hide Menu Initially */
+        #nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            flex-direction: column;
+            padding: 4px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+
+        /* Show Menu on Click */
+        #nav-links.active {
+            display: flex;
+        }
+
+
+        /* Hide Menu Initially */
+        #nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background: #fff;
+            flex-direction: column;
+            padding: 4px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        /* Show Menu */
+        #nav-links.active {
+            display: flex;
+        }
+
+
+
+        #nav-links a {
+            position: relative;
+            display: block;
+            padding: 6px 6px;
+            padding-left: 40px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #222 !important;
+            text-decoration: none;
+            overflow: hidden;
+            z-index: 1;
+            margin: 0;
+        }
+
+        /* #nav-links a:hover {
+            background: #f5f5f5;
+        }
+
+
+
+        #nav-links a::before {
+            content: "";
+            position: absolute;
+
+            inset: 2px;
+
+            border-radius: 6px;
+
+            background: linear-gradient(90deg,
+                    red,
+                    orange,
+                    yellow,
+                    green,
+                    cyan,
+                    blue,
+                    purple,
+                    red);
+
+            background-size: 300%;
+            animation: borderMove 7s linear infinite;
+
+       
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        
+        #nav-links a:hover::before,
+        #nav-links a:active::before,
+        #nav-links a:focus::before {
+            opacity: 1;
+        }
+
+
+
+        @keyframes borderMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 300% 50%;
+            }
+        } */
+
+        #heading1 {
+            font-size: 16px;
+            padding-top: 44px;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+            color: #fdbc4b;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        #heading2 {
+            line-height: 1.3;
+            text-align: left;
+            margin-left: 20px;
+
+        }
+
+
+        #heading2 span {
+            display: inline;
+            font-size: 30px;
+
+        }
+
+
+        .span6,
+        .span7 {
+            display: block;
+            font-size: 30px;
+        }
+
+
+        #paragraph1 {
+            width: min(90%, 700px);
+            font-size: 18px !important;
+            line-height: 1.8;
+            margin-left: 20px;
+
+            text-align: left;
+        }
+
+        #button1 {
+            padding-left: 20px;
+        }
+
+        .divicons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            margin-left: 0;
+            padding-left: 36px;
+        }
+
+        .img1 {
+            width: 230px !important;
+            height: 230px !important;
+            top: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .arrow1 {
+            position: relative;
+            transform: translateX(-50%);
+            top: 50px;
+            text-align: center;
+            align-items: center;
+            display: flex;
+        }
+
+
+        .div2 {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+
+        #div3,
+        #div4,
+        #div5 {
+            width: 80%;
+        }
+
+        .heading3,
+        .heading4,
+        .skillsheading,
+        #heading5 {
+            font-size: 30px;
+        }
+
+        .p2,
+        .p3,
+        .p4 {
+            font-size: 15px;
+            line-height: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .mobile-hide {
+            display: none;
+        }
+
+        .project-card {
+            width: 100%;
+        }
+
+        .project-content h2 {
+            font-size: 22px;
+        }
+
+        .project-content h3 {
+            font-size: 18px;
+        }
+
+        .skillspan {
+            font-size: 14px;
+        }
+
+
+        .level3 {
+            height: 812px;
+        }
+
+        .div11 {
+            width: 100%;
+            padding-left: 16px;
+        }
+
+        .icon7,
+        .icon8,
+        .icon9,
+        .icon10 {
+            padding-left: 20px;
+
+        }
+
+
+        .span1,
+        .span2,
+        .span3,
+        .span4{
+            font-size: 16px;
+        }
+
+        .div12 {
+            width: 100%;
+        }
+
+
+
+        #heading5 {
+            font-size: 40px !important;
+            display: none;
+        }
+
+        .line3 {
+            display: none;
+        }
+
+
+        .heading6 {
+            font-size: 24px !important;
+            padding-top: 50px;
+            text-align: center;
+            align-items: end;
+        }
+
+
+        .input1,
+        .input2,
+        .textarea1 {
+            width: 90%;
+            margin-left: 20px;
+        }
+
+        .button3 {
+            width: 50%;
+            margin-left: 30px;
+        }
+
+
+        .footerp {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+
+        .footer {
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            flex-direction: column;
+        }
+
+
+        .footer-links{
+            padding-left: 20px;
+        }
+
+        .footer-box {
+            width: 100%;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+
+        }
     }
 
-    .theme-toggle {
-        margin-top: 10px;
-        margin-right: 0;
-    }
-
-    #heading1 {
-        font-size: 18px;
-        padding-top: 50px;
-    }
-
-    #heading2 {
-        font-size: 32px;
-        line-height: 1.3;
-    }
-
-    #paragraph1 {
-        width: 92%;
-        font-size: 15px;
-        line-height: 1.7;
-        padding: 12px;
-    }
-
-    #button1,
-    #button2 {
-        width: 180px;
-        margin: 10px auto;
-        display: block;
-    }
-
-    .img1 {
-        width: 220px;
-        height: 220px;
-        top: 20px;
-    }
-
-    .div2 {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    #div3,
-    #div4,
-    #div5 {
-        width: 90%;
-    }
-
-    .heading3,
-    .heading4,
-    .skillsheading,
-    #heading5 {
-        font-size: 30px;
-    }
-
-    .p2,
-    .p3,
-    .p4 {
-        font-size: 15px;
-        line-height: 28px;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-
-    .project-card {
-        width: 100%;
-    }
-
-    .project-content h2 {
-        font-size: 22px;
-    }
-
-    .project-content h3 {
-        font-size: 18px;
-    }
-
-    .skillspan {
-        font-size: 14px;
-    }
-
-    .div11 {
-        width: 100%;
-    }
-
-    .icon7,
-    .icon8,
-    .icon9,
-    .icon10 {
-        padding-left: 20px;
-    }
-
-    .div12 {
-        width: 100%;
-    }
-
-    .input1,
-    .input2,
-    .textarea1 {
-        width: 100%;
-    }
-
-    .button3 {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .footer-box {
-        width: 100%;
-    }
-
-    .footer-bottom p {
-        font-size: 14px;
-    }
-}
 
 
-
-/* =========================================
+    /* =========================================
    SMALL MOBILE DEVICES
 ========================================= */
 
-@media (max-width: 480px) {
+    @media (max-width: 480px) {
 
-    #heading2 {
-        font-size: 26px;
-    }
+        #heading2 {
+            font-size: 26px;
+        }
 
-    #paragraph1 {
-        font-size: 14px;
-    }
+        #paragraph1 {
+            font-size: 14px;
+        }
 
-    .img1 {
-        width: 180px;
-        height: 180px;
-    }
+        .img1 {
+            width: 180px;
+            height: 180px;
+        }
 
-    .heading3,
-    .heading4,
-    .skillsheading,
-    #heading5 {
-        font-size: 25px;
-    }
+        .heading3,
+        .heading4,
+        .skillsheading,
+        #heading5 {
+            font-size: 25px;
+        }
 
-    .project-content {
-        padding: 16px;
-    }
+        .project-content {
+            padding: 16px;
+        }
 
-    .project-content p {
-        font-size: 14px;
-    }
+        .project-content p {
+            font-size: 14px;
+        }
 
-    .footer-box h3,
-    .quick-links-title {
-        font-size: 20px;
+        .footer-box h3,
+        .quick-links-title {
+            font-size: 20px;
+        }
     }
-}
 </style>
 
 <body>
 
     <div id="navbar">
 
-        <img src="/logo/Luxurious_AK_Web_Developer_logo-removebg-preview.png" alt="logo" class="logo-img">
+        <img src="/Luxurious_AK_Web_Developer_logo-removebg-preview.png" alt="logo" class="logo-img">
 
         <div class="theme-toggle">
 
@@ -445,12 +733,18 @@
 
         </div>
 
-        <a href="#">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="https://wa.me/03369669595" class="contact">Contact Me</a>
+        <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <div id="nav-links">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="https://wa.me/03369669595" class="contact">Contact Me</a>
+        </div>
 
     </div>
 
@@ -461,19 +755,28 @@
 
             <h3 id="heading1">PROFESSIONAL WEB DEVELOPER</h3>
 
-            <h1 id="heading2"><span class="span5">Hi, I'm</span> <span class="span6">Muhammad</span> <span
-                    class="span7">Abdullah</span> </h1>
+            <h1 id="heading2">
+                <span class="span5">Hi, I'm <span class="span6">Muhammad</span></span>
+                <!-- <span class="span6">Muhammad</span> -->
+                <span class="span7">Abdullah</span>
+            </h1>
 
-            <p id="paragraph1">I build modern, responsive, and high-performance web <br> applications. Passionate about
-                clean code, scalable <br> architecture and exceptional user experiences.</p>
+            <div class="hero-content">
+                <p id="paragraph1">
+                    I build modern, responsive and high-performance web applications.
+                    Passionate about clean code, scalable architecture and exceptional user experiences.
+                </p>
+            </div>
 
-            <a href="/Files/Muhammad_Abdullah_CV.pdf" target="_blank">
+            <a href="/Muhammad_Abdullah_CV.pdf" target="_blank" class="btn-link">
                 <button id="button1">
                     <i class="fas fa-user-check"></i> Hire Me
                 </button>
             </a>
 
-            <a href="projects.html"><button id="button2">My Projects</button></a>
+            <a href="projects.html" class="btn-link">
+                <button id="button2">My Projects</button>
+            </a>
 
             <br>
 
@@ -486,7 +789,7 @@
                     class="icon3"><i class="fa-brands fa-linkedin"></i></a>
             </div>
 
-            <img src="/portfolio/img2.png" alt="My Image" class="img1">
+            <img src="/img2.png" alt="My Image" class="img1">
 
             <i class="fa-solid fa-arrow-down arrow1"></i>
 
@@ -495,9 +798,13 @@
         <h2 class="heading3">About Me</h2>
         <hr class="line1">
         <br>
-        <p class="p2">I'm <b id="abdullahb">Muhammad Abdullah</b>, a dedicated Software Engineer specializing in
-            full-stack <br> web development. I craft pixel-perfect, accessible and SEO-optimized websites that <br>
-            help businesses grow their online presence.</p>
+        <p class="p2">
+            I'm <b id="abdullahb">Muhammad Abdullah</b>, a dedicated Software Engineer specializing in
+            full-stack <br class="mobile-hide">
+            web development. I craft pixel-perfect, accessible and SEO-optimized websites that
+            <br class="mobile-hide">
+            help businesses grow their online presence.
+        </p>
         <br>
         <p class="p3">With expertise in modern frameworks like React, Next.js and Node.js, I deliver <br> fast, secure
             and scalable web solutions. From responsive front-end interfaces to <br> robust back-end APIs, I handle the
@@ -648,7 +955,7 @@
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 95%;"></div>
+                <div class="progress" data-width="95%"></div>
             </div>
         </div>
 
@@ -660,7 +967,7 @@
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 90%;"></div>
+                <div class="progress" data-width="90%"></div>
             </div>
         </div>
 
@@ -672,7 +979,7 @@
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 90%;"></div>
+                <div class="progress" data-width="90%"></div>
             </div>
         </div>
 
@@ -684,7 +991,7 @@
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 85%;"></div>
+                <div class="progress" data-width="85%"></div>
             </div>
         </div>
 
@@ -696,7 +1003,7 @@
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width:80%;"></div>
+                <div class="progress" data-width="80%"></div>
             </div>
         </div>
 
@@ -708,7 +1015,7 @@
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 92%;"></div>
+                <div class="progress" data-width="92%"></div>
             </div>
         </div>
 
@@ -720,7 +1027,7 @@
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 78%;"></div>
+                <div class="progress" data-width="78%"></div>
             </div>
         </div>
 
@@ -732,7 +1039,7 @@
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 88%;"></div>
+                <div class="progress" data-width="88%"></div>
             </div>
         </div>
 
@@ -744,20 +1051,21 @@
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 82%;"></div>
+                <div class="progress" data-width="82%"></div>
             </div>
         </div>
 
         <div class="skill">
+
             <div class="skill-header">
                 <span class="skillspan">SEO & Web Performance</span>
                 <span class="skillspan">85%</span>
             </div>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 85%;"></div>
+                <div class="progress" data-width="85%"></div>
             </div>
-        </div><br>
+        </div>
     </div>
 
     <div class="level3">
@@ -812,7 +1120,7 @@
                 <!-- ABOUT -->
                 <div class="footer-box">
                     <h3>About Me</h3>
-                    <p>
+                    <p class="footerp">
                         I am a Full Stack Web Developer passionate
                         about building modern, responsive and
                         high-performance web applications.

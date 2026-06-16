@@ -172,3 +172,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    window.toggleMenu = function () {
+
+        const navLinks = document.getElementById("nav-links");
+        const menuToggle = document.getElementById("menuToggle");
+
+        navLinks.classList.toggle("active");
+
+        if (navLinks.classList.contains("active")) {
+            menuToggle.innerHTML = "✕"; // Cross
+        } else {
+            menuToggle.innerHTML = "☰"; // Hamburger
+        }
+    };
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const section = document.querySelector(".div14");
+    const bars = document.querySelectorAll(".progress");
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                bars.forEach(bar => {
+                    bar.style.width = bar.dataset.width;
+                });
+
+                observer.unobserve(section);
+            }
+
+        });
+
+    }, {
+        threshold: 0.3
+    });
+
+    observer.observe(section);
+
+});
