@@ -60,3 +60,25 @@ document.addEventListener("DOMContentLoaded", function () {
   cards.forEach(card => observer.observe(card));
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const icon = document.querySelector(".menu-toggle i");
+
+    menuToggle.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+        if (navLinks.classList.contains("active")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+        } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+        }
+
+    });
+
+});

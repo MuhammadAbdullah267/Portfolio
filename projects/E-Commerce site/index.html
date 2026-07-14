@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD Tech Shop | Premium Tech Products</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-laptop"></i>
+                <span>AD Tech</span>
+            </div>
+
+            <button class="menu-btn" aria-label="Toggle menu" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#shop" class="nav-link active">Shop</a>
+                <a href="#laptops" class="nav-link">Laptops</a>
+                <a href="#phones" class="nav-link">Phones</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-icons">
+                <button class="icon-btn wishlist-icon" aria-label="Wishlist" id="wishlistBtn">
+                    <i class="far fa-heart"></i>
+                    <span class="count-badge">0</span>
+                </button>
+
+                <button class="icon-btn cart-icon" aria-label="Shopping Cart" id="cartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="count-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Top Strip Banner -->
+    <div class="top-strip">
+        <i class="fas fa-truck"></i>
+        <span>Free shipping over $100 • 30-day returns • Secure checkout</span>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section id="shop" class="section shop">
+        <div class="section-title">
+            <h2>Featured Products</h2>
+            <p>Best tech products handpicked for you</p>
+        </div>
+
+        <div class="flash-sale">
+            <i class="fas fa-bolt"></i>
+            <span>Flash Sale ends in</span>
+            <strong id="saleTimer">23:59:59</strong>
+        </div>
+
+        <div class="shop-tools">
+            <input id="searchInput" type="text" placeholder="Search featured products...">
+
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="laptop">Laptops</option>
+                <option value="phone">Phones</option>
+                <option value="audio">Audio</option>
+                <option value="wearable">Wearables</option>
+                <option value="tablet">Tablets</option>
+            </select>
+
+            <select id="sortPrice">
+                <option value="default">Sort: Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+            </select>
+        </div>
+
+        <div class="products-grid" id="shopGrid">
+
+            <!-- Product 1: Laptop -->
+            <article class="product-card" data-category="laptop" data-price="999.99" data-discount="35">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600"
+                        alt="Pro Ultrabook Laptop">>
+                    <span class="tag new">New</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Pro Ultrabook Laptop</h3>
+                    <p class="specs">Intel i7 • 16GB RAM • 512GB SSD</p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="old-price">$1,499.99</span>
+                        <span class="price">$999.99</span>
+                        <span class="discount-badge">-35%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="Pro Ultrabook Laptop"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="Pro Ultrabook Laptop"
+                            data-price="999.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 2: Headphones -->
+            <article class="product-card" data-category="audio" data-price="249.99" data-discount="50">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"
+                        alt="Pro Wireless Headphones">
+                    <span class="tag hot">Hot</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Pro Wireless Headphones</h3>
+                    <p class="specs">Noise Cancel • 20hrs Battery • 5G Ready</p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="old-price">$499.99</span>
+                        <span class="price">$249.99</span>
+                        <span class="discount-badge">-50%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="Pro Wireless Headphones"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="Pro Wireless Headphones"
+                            data-price="249.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 3: Smart Watch -->
+            <article class="product-card" data-category="wearable" data-price="399.99" data-discount="20">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"
+                        alt="Tech Smart Watch">
+                    <span class="tag">Featured</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Tech Smart Watch</h3>
+                    <p class="specs">Fitness Tracking • 7 Days Battery • AMOLED</p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="old-price">$499.99</span>
+                        <span class="price">$399.99</span>
+                        <span class="discount-badge">-20%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="Tech Smart Watch"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="Tech Smart Watch"
+                            data-price="399.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 4: Tablet -->
+            <article class="product-card" data-category="tablet" data-price="799.99" data-discount="30">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600" alt="Pro Tablet">
+                    <span class="tag">Featured</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Pro Tablet 12.9"</h3>
+                    <p class="specs">120Hz Display • 8K Video • M2 Chip</p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="old-price">$1,139.99</span>
+                        <span class="price">$799.99</span>
+                        <span class="discount-badge">-30%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="Pro Tablet 12.9"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="Pro Tablet 12.9"
+                            data-price="799.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Laptops Section -->
+    <section id="laptops" class="section laptops">
+        <div class="section-title">
+            <h2>Laptops</h2>
+            <p>Powerful laptops for work and creativity</p>
+        </div>
+
+        <div class="products-grid">
+
+            <article class="product-card" data-category="laptop" data-price="999.99" data-discount="25">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=600" alt="Gaming Laptop">
+                    <span class="tag new">New</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Pro Ultrabook 15"</h3>
+                    <p class="specs">Intel i7 • 16GB • 512GB SSD</p>
+
+                    <div class="price-section">
+                        <span class="old-price">$1,329.99</span>
+                        <span class="price">$999.99</span>
+                        <span class="discount-badge">-25%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="Pro Ultrabook 15"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="Pro Ultrabook 15"
+                            data-price="999.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="laptop" data-price="1499.99" data-discount="40">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?w=600"
+                        alt="Gaming Laptop Setup">
+                </div>
+
+                <div class="product-info">
+                    <h3>Gaming Beast Laptop</h3>
+                    <p class="specs">RTX 4060 • 32GB • 1TB SSD</p>
+
+                    <div class="price-section">
+                        <span class="old-price">$2,499.99</span>
+                        <span class="price">$1,499.99</span>
+                        <span class="discount-badge">-40%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="Gaming Beast Laptop"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="Gaming Beast Laptop"
+                            data-price="1499.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="laptop" data-price="1799.99" data-discount="15">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="Smartphone">
+                </div>
+
+                <div class="product-info">
+                    <h3>MacBook Pro 16"</h3>
+                    <p class="specs">M3 Max • 36GB • 1TB SSD</p>
+
+                    <div class="price-section">
+                        <span class="old-price">$2,099.99</span>
+                        <span class="price">$1,799.99</span>
+                        <span class="discount-badge">-15%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="MacBook Pro 16"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="MacBook Pro 16"
+                            data-price="1799.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Smartphones Section -->
+    <section id="phones" class="section phones">
+        <div class="section-title">
+            <h2>Smartphones</h2>
+            <p>Latest smartphone technology at your fingertips</p>
+        </div>
+
+        <div class="products-grid">
+
+            <article class="product-card" data-category="phone" data-price="1199.99" data-discount="30">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600"
+                        alt="Pro Smartphone 15" loading="lazy">
+                    <span class="tag new">New</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Pro Smartphone 15</h3>
+                    <p class="specs">6.7" Display • 256GB • 5G</p>
+
+                    <div class="price-section">
+                        <span class="old-price">$1,699.99</span>
+                        <span class="price">$1,199.99</span>
+                        <span class="discount-badge">-30%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="Pro Smartphone 15"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="Pro Smartphone 15"
+                            data-price="1199.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="phone" data-price="799.99" data-discount="22">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=600" alt="Standard Smartphone"
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <h3>Standard Smartphone</h3>
+                    <p class="specs">6.1" Display • 128GB • 5G</p>
+
+                    <div class="price-section">
+                        <span class="old-price">$1,025.00</span>
+                        <span class="price">$799.99</span>
+                        <span class="discount-badge">-22%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="Standard Smartphone"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="Standard Smartphone"
+                            data-price="799.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="phone" data-price="599.99" data-discount="35">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600"
+                        alt="Budget Smartphone" loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <h3>Budget Smartphone</h3>
+                    <p class="specs">6.0" Display • 64GB • 4G</p>
+
+                    <div class="price-section">
+                        <span class="old-price">$919.99</span>
+                        <span class="price">$599.99</span>
+                        <span class="discount-badge">-35%</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-ghost wish-btn" data-product="Budget Smartphone"
+                            aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn btn-secondary add-to-cart" data-product="Budget Smartphone"
+                            data-price="599.99">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="section-title">
+            <h2>About Makos Tech</h2>
+            <p>Your trusted tech partner since 2015</p>
+        </div>
+
+        <div class="about-wrap">
+            <div class="about-intro">
+                <h3>Premium Tech Solutions</h3>
+                <p>At Makos Tech, we believe technology should be accessible to everyone. We carefully curate the finest
+                    tech products from around the world, ensuring quality, reliability, and innovation in every
+                    purchase.</p>
+
+                <div class="about-stats">
+                    <div>
+                        <strong>50K+</strong>
+                        <span>Happy Customers</span>
+                    </div>
+                    <div>
+                        <strong>500+</strong>
+                        <span>Products</span>
+                    </div>
+                    <div>
+                        <strong>9+</strong>
+                        <span>Years</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-highlights">
+                <div class="about-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h4>Fast Shipping</h4>
+                    <p>Delivery within 24-48 hours to most locations</p>
+                </div>
+
+                <div class="about-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Secure Checkout</h4>
+                    <p>Your data is protected with SSL encryption</p>
+                </div>
+
+                <div class="about-card">
+                    <i class="fas fa-undo-alt"></i>
+                    <h4>Easy Returns</h4>
+                    <p>30-day money-back guarantee on all items</p>
+                </div>
+
+                <div class="about-card">
+                    <i class="fas fa-headset"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Expert support team always ready to help</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>We'd love to hear from you</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>
+                            <a href="https://mail.google.com/" target="_blank">
+                                adtech.92pk@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/03269669595" target="_blank">+92 3269669595</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Faisalabad, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 AD Tech Shop. Learn. Build. Create.</p>
+
+        <div class="footer-links">
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="drawer-head">
+            <h3>Your Cart</h3>
+            <button class="drawer-close" id="drawerClose" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+
+        <div class="drawer-foot">
+            <div class="subtotal-row">
+                <span>Subtotal:</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+            <button class="btn btn-primary" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+        </div>
+    </aside>
+
+    <!-- To Top Button -->
+    <button class="to-top" id="toTopBtn" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Item added to cart!</span>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

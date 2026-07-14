@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top left,#2a2a2a,#0f0f0f);
+
+    overflow:hidden;
+}
+
+/* Golden Glow */
+
+body::before{
+    content:"";
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    background:#d4af37;
+
+    border-radius:50%;
+
+    filter:blur(150px);
+
+    opacity:.25;
+
+    top:-100px;
+    left:-100px;
+}
+
+/* Calculator */
+
+.calculator{
+    width:380px;
+
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:30px;
+
+    padding:25px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.6);
+
+    transition:.4s;
+}
+
+.calculator:hover{
+    transform:translateY(-8px);
+}
+
+/* Heading */
+
+.heading{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.heading h2{
+    color:#d4af37;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+/* Display */
+
+#display{
+    width:100%;
+    height:90px;
+
+    border:none;
+    outline:none;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    background:#1d1d1d;
+
+    color:#fff;
+
+    font-size:36px;
+
+    text-align:right;
+
+    margin-bottom:20px;
+
+    box-shadow:
+    inset 0 0 15px rgba(0,0,0,.5);
+}
+
+/* Grid */
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+/* Buttons */
+
+button{
+    height:65px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#222;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-4px);
+
+    background:#333;
+}
+
+/* Gold Buttons */
+
+.gold{
+    background:#d4af37;
+    color:#111;
+    font-weight:700;
+}
+
+.gold:hover{
+    background:#f1c84b;
+}
+
+/* Special Buttons */
+
+.special{
+    background:#444;
+}
+
+.special:hover{
+    background:#555;
+}
+
+/* Equal */
+
+.equal{
+    background:#d4af37;
+    color:#111;
+    font-weight:bold;
+}
+
+.equal:hover{
+    background:#f1c84b;
+}
+
+/* Zero */
+
+.zero{
+    grid-column:span 2;
+}

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Management System — Final Year Project</title>
+
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Meta -->
+  <meta name="description" content="Responsive Student Management System — Local Storage, search, CRUD, dashboard, animations." />
+</head>
+<body>
+  <main class="container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="title">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h1>Student Management System</h1>
+      </div>
+
+      <div class="actions">
+        <div class="search-wrapper">
+          <input id="searchInput" type="search" placeholder="Search by name or roll..." />
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+        <button id="addStudentBtn" class="btn primary">
+          <i class="fa-solid fa-user-plus"></i> Add Student
+        </button>
+      </div>
+    </header>
+
+    <!-- Dashboard Cards -->
+    <section class="dashboard" aria-label="Dashboard summary">
+      <div class="card" id="totalStudentsCard">
+        <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+        <div class="card-body">
+          <div class="card-title">Total Students</div>
+          <div class="card-value" id="totalStudents">0</div>
+        </div>
+      </div>
+
+      <div class="card" id="averageMarksCard">
+        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="card-body">
+          <div class="card-title">Average Marks</div>
+          <div class="card-value" id="avgMarks">0</div>
+        </div>
+      </div>
+
+      <div class="card" id="passedStudentsCard">
+        <div class="card-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="card-body">
+          <div class="card-title">Passed Students</div>
+          <div class="card-value" id="passedStudents">0</div>
+        </div>
+      </div>
+
+      <div class="card" id="failedStudentsCard">
+        <div class="card-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+        <div class="card-body">
+          <div class="card-title">Failed Students</div>
+          <div class="card-value" id="failedStudents">0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats Row -->
+    <section class="quick-stats">
+      <div class="stat">Total Students: <span id="statTotal">0</span></div>
+      <div class="stat">Average Marks: <span id="statAvg">0</span></div>
+      <div class="stat">Highest Marks: <span id="statHigh">0</span></div>
+    </section>
+
+    <!-- Table -->
+    <section class="table-section" aria-label="Student records">
+      <div class="table-wrapper">
+        <table id="studentsTable" class="students-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Student Name</th>
+              <th>Roll Number</th>
+              <th>Class</th>
+              <th>Marks</th>
+              <th>Percentage</th>
+              <th>Grade</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentsTbody">
+            <!-- Rows are injected by script.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal: Add / Edit Student -->
+  <div id="studentModal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <header class="modal-header">
+        <h2 id="modalTitle">Add Student</h2>
+        <button id="closeModal" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+
+      <form id="studentForm" class="modal-form" novalidate>
+        <input type="hidden" id="editIndex" value="-1" />
+
+        <label>
+          Student Name
+          <input id="studentName" type="text" placeholder="e.g. John Doe" required />
+        </label>
+
+        <label>
+          Roll Number
+          <input id="rollNumber" type="text" placeholder="e.g. 2026-001" required />
+        </label>
+
+        <label>
+          Class
+          <input id="studentClass" type="text" placeholder="e.g. 12-A" required />
+        </label>
+
+        <label>
+          Avg Marks (0 - 100)
+          <input id="marks" type="number" min="0" max="100" placeholder="e.g. 78" required />
+        </label>
+
+        <div class="form-actions">
+          <button type="button" id="cancelBtn" class="btn ghost">Cancel</button>
+          <button type="submit" class="btn primary" id="saveBtn">
+            <i class="fa-solid fa-floppy-disk"></i> Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div id="confirmModal" class="modal" aria-hidden="true">
+    <div class="modal-panel small">
+      <header class="modal-header">
+        <h3>Confirm</h3>
+      </header>
+      <div class="modal-body">
+        <p id="confirmMsg">Are you sure?</p>
+      </div>
+      <div class="form-actions">
+        <button id="confirmNo" class="btn ghost">No</button>
+        <button id="confirmYes" class="btn danger">Yes, delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notifications -->
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

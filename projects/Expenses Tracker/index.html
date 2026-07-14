@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/script.js"></script>
+
+
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Expense Tracker</h2>
+        </div>
+
+        <div class="search-box">
+            <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Expense">
+        </div>
+
+        <div class="categories">
+
+            <h3>Categories</h3>
+
+            <ul>
+                <li><i class="fa-solid fa-cart-shopping"></i> Groceries</li>
+                <li><i class="fa-solid fa-utensils"></i> Restaurants</li>
+                <li><i class="fa-solid fa-house"></i> Rent</li>
+                <li><i class="fa-solid fa-film"></i> Entertainment</li>
+                <li><i class="fa-solid fa-plane"></i> Travel</li>
+                <li><i class="fa-solid fa-car"></i> Transport</li>
+                <li><i class="fa-solid fa-credit-card"></i> Subscription</li>
+            </ul>
+
+        </div>
+
+        <div class="recent-expenses">
+
+            <h3>Recent Expenses</h3>
+
+            <ul id="recentList"></ul>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+
+            <div class="profile">
+                <i class="fa-solid fa-wallet"></i>
+                Personal Account
+            </div>
+
+            <div class="actions">
+                <button id="downloadBtn">
+                    Download Report
+                </button>
+
+                <button id="filterBtn">
+                    Filter
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Chart -->
+        <div class="chart-section">
+
+            <canvas id="expenseChart"></canvas>
+
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+
+            <div class="card">
+                <h4>Total Budget</h4>
+                <h2 id="budgetDisplay">0</h2>
+            </div>
+
+            <div class="card">
+                <h4>Total Expense</h4>
+                <h2 id="expenseDisplay">0</h2>
+            </div>
+
+            <div class="card">
+                <h4>Remaining Balance</h4>
+                <h2 id="balanceDisplay">0</h2>
+            </div>
+
+        </div>
+
+        <!-- Budget Input -->
+        <div class="budget-box">
+
+            <input
+            type="number"
+            id="budgetInput"
+            placeholder="Enter Budget">
+
+            <button onclick="saveBudget()">
+                Save Budget
+            </button>
+
+        </div>
+
+        <!-- Add Expense -->
+        <div class="expense-form">
+
+            <input
+            type="text"
+            id="title"
+            placeholder="Expense Title">
+
+            <input
+            type="number"
+            id="amount"
+            placeholder="Amount">
+
+            <select id="category">
+
+                <option>Groceries</option>
+                <option>Restaurants</option>
+                <option>Rent</option>
+                <option>Entertainment</option>
+                <option>Travel</option>
+                <option>Transport</option>
+                <option>Subscription</option>
+
+            </select>
+
+            <button onclick="addExpense()">
+                Add Expense
+            </button>
+
+        </div>
+
+        <!-- Expense Table -->
+        <div class="table-section">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Title</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Delete</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="expenseList"></tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

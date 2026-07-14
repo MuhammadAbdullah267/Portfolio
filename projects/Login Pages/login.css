@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #572845, #ff6b6b);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    color: white;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field input {
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+
+.field input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.field input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.password-field .input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field .input-with-icon input {
+    padding-right: 50px;
+    width: 100%;
+}
+
+.eye-btn {
+    position: absolute;
+    right: 8px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.eye-btn:hover {
+    color: white;
+}
+
+.checkbox-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkbox-field input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.message {
+    color: #ffcccc;
+    font-size: 14px;
+    text-align: center;
+    min-height: 20px;
+}
+
+.btn {
+    padding: 12px;
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+}
+
+.btn:hover {
+    background: #45b7aa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+

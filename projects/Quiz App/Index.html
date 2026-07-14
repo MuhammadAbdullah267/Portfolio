@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <!-- Header: timer and streak -->
+        <div class="quiz-header">
+
+            <div class="timer">
+                <i class="fa-solid fa-clock"></i>
+                Time Left:
+                <span id="time">15</span>s
+            </div>
+
+            <div class="streak">
+                <i class="fa-solid fa-fire"></i>
+                Streak:
+                <span id="streak-count">0</span>
+            </div>
+
+        </div>
+
+
+        <!-- Progress indicator -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <!-- Question display -->
+        <div class="question-number" id="question-number"></div>
+
+        <div class="question">
+            Question will appear here
+        </div>
+
+        <!-- Answer options -->
+        <div class="options"></div>
+
+        <!-- Feedback and explanation -->
+        <div class="feedback" id="feedback" aria-live="polite"></div>
+        <div class="explanation" id="explanation"></div>
+
+        <!-- Results section -->
+        <div class="result">
+            <div class="score-title">Results</div>
+
+            <div class="score-grid">
+
+                <div class="score-card">
+                    <div class="score-label">Correct</div>
+                    <div class="score-value">
+                        <span id="score">0</span>
+                        <span class="score-unit">
+                            / <span id="total">0</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="score-card">
+                    <div class="score-label">Percentage</div>
+                    <div class="score-value">
+                        <span id="percent">0</span>
+                        <span class="score-unit">%</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="score-summary" id="summary"></div>
+            <div class="review" id="review"></div>
+        </div>
+
+        <button class="restart-btn">Restart Quiz</button>
+
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

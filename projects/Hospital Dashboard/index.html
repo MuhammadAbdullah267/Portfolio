@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-hospital"></i>
+            <h2>Hospital</h2>
+        </div>
+
+        <ul>
+            <li class="active">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-user-injured"></i>
+                <span>Patients</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-user-doctor"></i>
+                <span>Doctors</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Appointments</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-file-medical"></i>
+                <span>Medical Records</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <h1>Hospital Dashboard</h1>
+                <p>Welcome Back Admin</p>
+            </div>
+
+            <div class="header-right">
+                <button id="darkMode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Statistics -->
+        <section class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-user-injured"></i>
+                <h2 id="patientCount">0</h2>
+                <p>Patients</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h2 id="doctorCount">0</h2>
+                <p>Doctors</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h2 id="appointmentCount">0</h2>
+                <p>Appointments</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-bed"></i>
+                <h2>15</h2>
+                <p>Rooms Available</p>
+            </div>
+
+        </section>
+
+        <!-- Patient Form -->
+        <section class="form-section">
+            <h2>Add Patient</h2>
+
+            <form id="patientForm">
+
+                <input type="text"
+                id="patientName"
+                placeholder="Patient Name"
+                required>
+
+                <input type="number"
+                id="patientAge"
+                placeholder="Age"
+                required>
+
+                <input type="text"
+                id="patientDisease"
+                placeholder="Disease"
+                required>
+
+                <button type="submit">
+                    Add Patient
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Doctor Form -->
+        <section class="form-section">
+            <h2>Add Doctor</h2>
+
+            <form id="doctorForm">
+
+                <input type="text"
+                id="doctorName"
+                placeholder="Doctor Name"
+                required>
+
+                <input type="text"
+                id="specialization"
+                placeholder="Specialization"
+                required>
+
+                <button type="submit">
+                    Add Doctor
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Appointment Form -->
+        <section class="form-section">
+            <h2>Book Appointment</h2>
+
+            <form id="appointmentForm">
+
+                <input type="text"
+                id="appointmentPatient"
+                placeholder="Patient Name"
+                required>
+
+                <input type="text"
+                id="appointmentDoctor"
+                placeholder="Doctor Name"
+                required>
+
+                <input type="date"
+                id="appointmentDate"
+                required>
+
+                <button type="submit">
+                    Book Appointment
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Search -->
+        <section class="search-box">
+            <input type="text"
+            id="search"
+            placeholder="Search Patient...">
+        </section>
+
+        <!-- Patient Table -->
+        <section class="table-section">
+            <h2>Patients</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Disease</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="patientTable">
+
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Doctor Table -->
+        <section class="table-section">
+            <h2>Doctors</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Specialization</th>
+                    </tr>
+                </thead>
+
+                <tbody id="doctorTable">
+
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Appointment Table -->
+        <section class="table-section">
+            <h2>Appointments</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient</th>
+                        <th>Doctor</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody id="appointmentTable">
+
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

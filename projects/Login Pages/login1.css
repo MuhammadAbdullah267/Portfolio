@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../sidebar/Inter/Inter_28pt-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    width: 800px;
+    height: 450px;
+    background: #1a1a1a;
+    border: 2px solid #00f2ff;
+    box-shadow: 0 0 20px #00f2ff, inset 0 0 10px #00f2ff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.form-login {
+    flex: 1.2;
+    width: 288px;
+    padding: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 288px;
+}
+
+.input-grup {
+    position: relative;
+    margin-bottom: 20px;
+    width: 288px;
+}
+
+.input-field {
+    width: 288px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 8px 0;
+    outline: none;
+    font-size: 18px;
+}
+
+.input-grup .bi {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+}
+
+.submit {
+    width: 280px;
+    padding: 10px 0;
+    background: linear-gradient(45deg, #0ef, #c800ff);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+}
+
+.submit:hover {
+    background: linear-gradient(45deg, #c800ff, #0ef);
+    box-shadow: 1px 1px 20px 0 #0ef;
+    transform: scale(1.1);
+}
+
+.footer {
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+.link {
+    color: #0ef;
+    text-decoration: none;
+}
+
+.banner {
+    position: absolute;
+    top: 100px;
+    right: 285px;
+    width: 450px;
+    height: 390px;
+    background: linear-gradient(to right, #0ef, #c800ff);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+    padding-right: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    border-top-right-radius: 8px;
+}
+
+.banner:hover {
+    background: linear-gradient(to right, #c800ff, #0ef);
+}
+
+.banner .bi {
+    font-size: 70px;
+    margin-top: -50px;
+    margin-right: 40px;
+    color: white;
+}
+
+.text {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
